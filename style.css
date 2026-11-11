@@ -757,3 +757,10 @@
 [dir="rtl"] .od-axis-y { transform: none; }
 [dir="rtl"] .od-dot { left: auto; right: var(--x); margin: 0 -4px -4px 0; }
 [dir="rtl"] .od-steps li { padding: 8px 8px 8px 14px; }
+
+
+
+/*******/
+.dda-toolbar-menu .login-button i{
+    display: none;
+}
