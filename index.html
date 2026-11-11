@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Open Data | Mohammed Bin Rashid Housing Establishment</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="od-page">
+
+    <!-- ============================================================
+       EXISTING HEADER, BREADCRUMB AND "OPEN DATA" TITLE BANNER
+       (unchanged — keep the current site markup here)
+       ============================================================ -->
+
+    <main id="open-data">
+
+        <!-- ========== SECTION 1: INTRO (full width) ========== -->
+        <section class="od-intro" aria-labelledby="od-title">
+            <div class="container-xxl od-container">
+                <div class="row g-4 g-xl-5">
+                    <div class="col-lg-8">
+                        <h2 id="od-title" class="od-title">Open Data</h2>
+                        <p class="od-lead">Mohammed Bin Rashid Housing Establishment provides Open Data with the highest
+                            levels of accuracy and transparency for visitors to MBRHE Smart Portal, targeting human
+                            development and encouragement of public participation and raising the level of awareness and
+                            happiness in the community to achieve the ultimate goal of a smart city.</p>
+                        <p class="od-lead">The datasets are available on <a href="#" class="fw-semibold">Dubai Pulse</a>
+                            in compliance with:</p>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <a href="#" class="od-law">
+                                    <svg class="od-icon" aria-hidden="true" viewBox="0 0 24 24">
+                                        <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
+                                        <path d="M14 3v5h5" />
+                                        <path d="M9 13h6M9 17h6" />
+                                    </svg>
+                                    <span class="od-law-text">Law (26) of 2015 Regulating Data Dissemination and
+                                        Exchange in the Emirate of Dubai</span>
+                                    <svg class="od-icon od-icon-sm" aria-hidden="true" viewBox="0 0 24 24">
+                                        <path d="M7 17 17 7M9 7h8v8" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#" class="od-law">
+                                    <svg class="od-icon" aria-hidden="true" viewBox="0 0 24 24">
+                                        <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
+                                        <path d="M14 3v5h5" />
+                                        <path d="M9 13h6M9 17h6" />
+                                    </svg>
+                                    <span class="od-law-text">Law (2) of 2016 Establishing the Dubai Data
+                                        Establishment</span>
+                                    <svg class="od-icon od-icon-sm" aria-hidden="true" viewBox="0 0 24 24">
+                                        <path d="M7 17 17 7M9 7h8v8" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <aside class="od-notes" aria-labelledby="notes-title">
+                            <h3 id="notes-title" class="od-notes-title">Notes</h3>
+                            <ul class="od-notes-list">
+                                <li>Mohammed Bin Rashid Housing Establishment is not liable for any data distortion,
+                                    modification or wrong use</li>
+                                <li>Customers have the right to use this data and statistics at their own liability</li>
+                                <li>The source of the data must be mentioned when used</li>
+                            </ul>
+                            <p class="od-notes-foot">Maximum size of downloadable files in all file formats (PDF, MS
+                                Office Documents) is less than 40 MB. You do not have Acrobat Reader? <a
+                                    href="#">Download Adobe Acrobat Reader</a>.</p>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SECTION 2: DATASETS (horizontal tabs) ========== -->
+        <section class="od-datasets" aria-labelledby="ds-title">
+            <div class="container-xxl od-container">
+
+                <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+                    <div>
+                        <h2 id="ds-title" class="od-section-title">Explore the datasets</h2>
+                        <p class="od-muted mb-0">Choose a dataset to see interactive charts built from the published
+                            data.</p>
+                    </div>
+                    <button type="button" class="btn od-btn-outline" data-bs-toggle="modal"
+                        data-bs-target="#feedbackModal">
+                        <svg class="od-icon od-icon-sm" aria-hidden="true" viewBox="0 0 24 24">
+                            <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z" />
+                        </svg>
+                        Give feedback or request data
+                    </button>
+                </div>
+
+                <ul class="nav od-tabs" id="datasetTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="tab-lg" data-bs-toggle="tab" data-bs-target="#pane-lg"
+                            type="button" role="tab" aria-controls="pane-lg" aria-selected="true">
+                            <span class="od-tab-title">Land Grants</span>
+                            <span class="od-tab-meta">55,861 records</span>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab-mc" data-bs-toggle="tab" data-bs-target="#pane-mc"
+                            type="button" role="tab" aria-controls="pane-mc" aria-selected="false">
+                            <span class="od-tab-title">Master Constructions</span>
+                            <span class="od-tab-meta">22,953 records</span>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab-pv" data-bs-toggle="tab" data-bs-target="#pane-pv"
+                            type="button" role="tab" aria-controls="pane-pv" aria-selected="false">
+                            <span class="od-tab-title">Projects &amp; Villas</span>
+                            <span class="od-tab-meta">86 projects · 1,631 villas</span>
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="tab-content od-panel">
+
+                    <!-- ===================== LAND GRANTS ===================== -->
+                    <div class="tab-pane fade show active" id="pane-lg" role="tabpanel" aria-labelledby="tab-lg"
+                        tabindex="0">
+                        <div class="row g-4 mb-4">
+                            <div class="col-lg-8">
+                                <h3 class="od-panel-title">Land Grants</h3>
+                                <p class="mb-2">Residential land grant applications with applicant age, gender, marital
+                                    status, family size and dates.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="od-chip-static">mrhe_land_grants</span>
+                                    <span class="od-chip-static">55,861 records</span>
+                                    <span class="od-chip-static">Totals only</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="#" class="btn btn-primary od-pulse-btn">
+                                    <svg class="od-icon od-icon-sm" aria-hidden="true" viewBox="0 0 24 24">
+                                        <path
+                                            d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+                                    </svg>
+                                    <span class="od-pulse-text"><span>View on Dubai Pulse</span><small>Land Grants
+                                            dataset</small></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="od-note mb-4" role="note">
+                            <svg class="od-icon od-icon-sm" aria-hidden="true" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 8h.01M11 12h1v5h1" />
+                            </svg>
+                            <span>This view shows totals and charts only. Individual applicants are never listed or
+                                searchable.</span>
+                        </div>
+
+                        <div class="od-filters mb-4" role="group" aria-label="Land grant filters">
+                            <div class="row g-3 align-items-end">
+                                <div class="col-lg-5">
+                                    <span class="od-label">Year range: <span class="od-accent-text"
+                                            id="lgRangeText">2015 – 2025</span></span>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <label for="lgFrom" class="od-sublabel">From</label>
+                                        <input type="range" class="form-range od-range" id="lgFrom" min="2015"
+                                            max="2025" step="1" value="2015">
+                                        <label for="lgTo" class="od-sublabel">To</label>
+                                        <input type="range" class="form-range od-range" id="lgTo" min="2015" max="2025"
+                                            step="1" value="2025">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <span class="od-label" id="lgGenderLabel">Gender</span>
+                                    <div class="d-flex gap-2" role="group" aria-labelledby="lgGenderLabel"
+                                        id="lgGender">
+                                        <button type="button" class="btn od-chip active" data-value="All"
+                                            aria-pressed="true">All</button>
+                                        <button type="button" class="btn od-chip" data-value="Male"
+                                            aria-pressed="false">Male</button>
+                                        <button type="button" class="btn od-chip" data-value="Female"
+                                            aria-pressed="false">Female</button>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <label for="lgMarital" class="od-label">Marital status</label>
+                                    <select id="lgMarital" class="form-select od-select">
+                                        <option value="All">All statuses</option>
+                                        <option value="Married">Married</option>
+                                        <option value="Single">Single</option>
+                                        <option value="Divorced">Divorced</option>
+                                        <option value="Widowed">Widowed</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-1">
+                                    <button type="button" class="btn btn-link od-reset" id="lgReset">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 mb-4">
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="od-kpi"><span class="od-kpi-label">Grants in selected years</span><span
+                                        class="od-kpi-value" id="lgTotal">—</span></div>
+                            </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="od-kpi"><span class="od-kpi-label">Peak year</span><span
+                                        class="od-kpi-value" id="lgPeak">—</span></div>
+                            </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="od-kpi"><span class="od-kpi-label">Largest age group</span><span
+                                        class="od-kpi-value" id="lgTopAge">—</span></div>
+                            </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="od-kpi"><span class="od-kpi-label">Records in dataset</span><span
+                                        class="od-kpi-value">55,861</span></div>
+                            </div>
+                        </div>
+
+                        <figure class="od-card od-chart mb-4">
+                            <figcaption class="od-chart-head">
+                                <span class="od-chart-title">Grants per year</span>
+                                <span class="od-chart-sub">Years outside the selected range are shown faded</span>
+                            </figcaption>
+                            <div class="od-vbars od-vbars-lg" id="lgYearChart"></div>
+                        </figure>
+
+                        <div class="row g-4">
+                            <div class="col-lg-6">
+                                <figure class="od-card od-chart h-100">
+                                    <figcaption class="od-chart-head"><span class="od-chart-title">Applicants by age
+                                            group</span></figcaption>
+                                    <div class="od-hbars" id="lgAgeChart"></div>
+                                </figure>
+                            </div>
+                            <div class="col-lg-6">
+                                <figure class="od-card od-chart h-100">
+                                    <figcaption class="od-chart-head"><span class="od-chart-title">Applicants by family
+                                            size</span></figcaption>
+                                    <div class="od-vbars od-vbars-accent" id="lgFamilyChart"></div>
+                                    <p class="od-chart-sub mt-2 mb-0">Family members per application</p>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ================= MASTER CONSTRUCTIONS ================= -->
+                    <div class="tab-pane fade" id="pane-mc" role="tabpanel" aria-labelledby="tab-mc" tabindex="0">
+                        <div class="row g-4 mb-4">
+                            <div class="col-lg-8">
+                                <h3 class="od-panel-title">Master Constructions</h3>
+                                <p class="mb-2">Construction contracts for loans and grants with contract value, loan
+                                    value, dates, completion and status.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="od-chip-static">mrhe_master_constructions</span>
+                                    <span class="od-chip-static">22,953 records</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="#" class="btn btn-primary od-pulse-btn">
+                                    <svg class="od-icon od-icon-sm" aria-hidden="true" viewBox="0 0 24 24">
+                                        <path
+                                            d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+                                    </svg>
+                                    <span class="od-pulse-text"><span>View on Dubai Pulse</span><small>Master
+                                            Constructions dataset</small></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="od-note mb-4" role="note">
+                            <svg class="od-icon od-icon-sm" aria-hidden="true" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 8h.01M11 12h1v5h1" />
+                            </svg>
+                            <span>Service types and statuses are listed exactly as they appear in the dataset.</span>
+                        </div>
+
+                        <div class="od-filters mb-4" role="group" aria-label="Master construction filters">
+                            <div class="row g-3 align-items-end">
+                                <div class="col-md-4 col-lg-4">
+                                    <label for="mcService" class="od-label">Service type</label>
+                                    <select id="mcService" class="form-select od-select">
+                                        <option value="All">All service types</option>
+                                        <option value="Construction loan">Construction loan</option>
+                                        <option value="Construction grant">Construction grant</option>
+                                        <option value="Maintenance loan">Maintenance loan</option>
+                                        <option value="Extension grant">Extension grant</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 col-lg-4">
+                                    <label for="mcStatus" class="od-label">Project status</label>
+                                    <select id="mcStatus" class="form-select od-select">
+                                        <option value="All">All statuses</option>
+                                        <option value="Completed">Completed</option>
+                                        <option value="In progress">In progress</option>
+                                        <option value="Not started">Not started</option>
+                                        <option value="On hold">On hold</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 col-lg-3">
+                                    <label for="mcYear" class="od-label">Year</label>
+                                    <select id="mcYear" class="form-select od-select">
+                                        <option value="All">All years</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-1 col-lg-1">
+                                    <button type="button" class="btn btn-link od-reset" id="mcReset">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 mb-4">
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="od-kpi"><span class="od-kpi-label">Contracts</span><span
+                                        class="od-kpi-value" id="mcContracts">—</span></div>
+                            </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="od-kpi"><span class="od-kpi-label">Total contract value</span><span
+                                        class="od-kpi-value" id="mcContractTotal">—</span></div>
+                            </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="od-kpi"><span class="od-kpi-label">Total loan value</span><span
+                                        class="od-kpi-value" id="mcLoanTotal">—</span></div>
+                            </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="od-kpi"><span class="od-kpi-label">Fully completed</span><span
+                                        class="od-kpi-value" id="mcDone">—</span></div>
+                            </div>
+                        </div>
+
+                        <figure class="od-card od-chart mb-4">
+                            <figcaption class="od-chart-head">
+                                <span class="od-chart-title">Contract value and loan value per year (AED million)</span>
+                                <span class="od-legend">
+                                    <span class="od-legend-item"><span
+                                            class="od-swatch od-swatch-primary"></span>Contract value</span>
+                                    <span class="od-legend-item"><span class="od-swatch od-swatch-accent"></span>Loan
+                                        value</span>
+                                </span>
+                            </figcaption>
+                            <div class="od-vbars od-vbars-lg" id="mcValueChart"></div>
+                            <p class="od-chart-sub mt-2 mb-0">Rows with no contract dates are left out of this chart.
+                            </p>
+                        </figure>
+
+                        <div class="row g-4">
+                            <div class="col-lg-6">
+                                <figure class="od-card od-chart h-100">
+                                    <figcaption class="od-chart-head"><span class="od-chart-title">Contracts by
+                                            completion</span></figcaption>
+                                    <div class="od-vbars" id="mcCompletionChart"></div>
+                                </figure>
+                            </div>
+                            <div class="col-lg-6">
+                                <figure class="od-card od-chart h-100">
+                                    <figcaption class="od-chart-head"><span class="od-chart-title">Contracts by project
+                                            status</span></figcaption>
+                                    <div class="od-hbars od-hbars-wide" id="mcStatusChart"></div>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =================== PROJECTS & VILLAS =================== -->
+                    <div class="tab-pane fade" id="pane-pv" role="tabpanel" aria-labelledby="tab-pv" tabindex="0">
+                        <div class="row g-4 mb-4">
+                            <div class="col-lg-8">
+                                <h3 class="od-panel-title">Projects &amp; Villas</h3>
+                                <p class="mb-2">MBRHE housing projects with the area each one is in, and the villa
+                                    details inside each project: type, style, bedrooms, floors, plot size and built
+                                    size.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="od-chip-static">mrhe_projects · 86 projects</span>
+                                    <span class="od-chip-static">mrhe_projects_villas · 1,631 villas</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 d-flex flex-column gap-2">
+                                <a href="#" class="btn btn-primary od-pulse-btn">
+                                    <svg class="od-icon od-icon-sm" aria-hidden="true" viewBox="0 0 24 24">
+                                        <path
+                                            d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+                                    </svg>
+                                    <span class="od-pulse-text"><span>View on Dubai Pulse</span><small>Ready-made House
+                                            Projects by Mohammed Bin Rashid Housing Establishment</small></span>
+                                </a>
+                                <a href="#" class="btn btn-primary od-pulse-btn">
+                                    <svg class="od-icon od-icon-sm" aria-hidden="true" viewBox="0 0 24 24">
+                                        <path
+                                            d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+                                    </svg>
+                                    <span class="od-pulse-text"><span>View on Dubai Pulse</span><small>Projects Villas
+                                            dataset</small></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="od-note mb-4" role="note">
+                            <svg class="od-icon od-icon-sm" aria-hidden="true" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 8h.01M11 12h1v5h1" />
+                            </svg>
+                            <span>The datasets have no coordinates, so the map works at area level using each project’s
+                                location name.</span>
+                        </div>
+
+                        <ol class="od-steps mb-4" aria-label="How this view works">
+                            <li><span class="od-step-num">1</span>Pick an area on the map</li>
+                            <li><span class="od-step-num">2</span>Choose a project</li>
+                            <li><span class="od-step-num">3</span>See its villa mix</li>
+                        </ol>
+
+                        <div class="row g-4 mb-4">
+                            <div class="col-xl-7">
+                                <div class="d-flex flex-wrap justify-content-between align-items-baseline gap-2 mb-2">
+                                    <h4 class="od-sub-title">Housing projects by area</h4>
+                                    <span class="od-chart-sub">Area-level map · area positions come from a website
+                                        lookup of area names</span>
+                                </div>
+
+                                <!-- Google Map: markers are added by script.js from PLACEHOLDER_AREAS -->
+                                <div class="od-map" role="region" aria-label="Map of MBRHE housing areas in Dubai">
+                                    <div class="od-gmap" id="areaMap"></div>
+                                    <div class="od-map-fallback d-none" id="mapFallback" role="status">
+                                        The map could not be loaded. Use the project search or the list to browse
+                                        projects.
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap align-items-center gap-3 mt-3">
+                                    <button type="button" class="btn od-area-na" id="areaNA" data-area="na"
+                                        aria-pressed="false">Area not specified · <span id="naCount">0</span>
+                                        projects</button>
+                                    <span class="od-chart-sub">Projects with an empty area are listed here.</span>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-5">
+                                <div class="od-card od-project-panel">
+                                    <label for="areaSelect" class="od-label">Area</label>
+                                    <select id="areaSelect" class="form-select od-select"></select>
+                                    <label for="projectSearch" class="od-label">Search for a project</label>
+                                    <input type="search" id="projectSearch" class="form-control od-input"
+                                        placeholder="Type a project name">
+                                    <div class="od-list-head">
+                                        <h4 class="od-list-title" id="listTitle">—</h4>
+                                        <span class="od-chart-sub" id="listCount"></span>
+                                    </div>
+                                    <ul class="od-project-list" id="projectList"></ul>
+                                    <p class="od-muted mb-0 d-none" id="noResults">No projects match this search.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="od-villa">
+                            <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+                                <div>
+                                    <span class="od-eyebrow">Villa mix</span>
+                                    <h4 class="od-villa-title" id="villaTitle">—</h4>
+                                    <span class="od-muted" id="villaArea"></span>
+                                </div>
+                                <div class="d-flex flex-wrap align-items-end gap-3">
+                                    <div class="od-project-select">
+                                        <label for="projectSelect" class="od-label">Project</label>
+                                        <select id="projectSelect" class="form-select od-select"></select>
+                                    </div>
+                                    <div>
+                                        <span class="od-label" id="bedLabel">Bedrooms</span>
+                                        <div class="d-flex gap-2" role="group" aria-labelledby="bedLabel"
+                                            id="bedFilter">
+                                            <button type="button" class="btn od-chip active" data-value="All"
+                                                aria-pressed="true">All</button>
+                                            <button type="button" class="btn od-chip" data-value="3"
+                                                aria-pressed="false">3</button>
+                                            <button type="button" class="btn od-chip" data-value="4"
+                                                aria-pressed="false">4</button>
+                                            <button type="button" class="btn od-chip" data-value="5"
+                                                aria-pressed="false">5</button>
+                                            <button type="button" class="btn od-chip" data-value="6"
+                                                aria-pressed="false">6</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-3 mb-4">
+                                <div class="col-sm-6 col-xl-3">
+                                    <div class="od-kpi"><span class="od-kpi-label">Villas in project</span><span
+                                            class="od-kpi-value" id="villaCount">—</span></div>
+                                </div>
+                                <div class="col-sm-6 col-xl-3">
+                                    <div class="od-kpi"><span class="od-kpi-label">Shown with current filter</span><span
+                                            class="od-kpi-value" id="villaShown">—</span></div>
+                                </div>
+                                <div class="col-sm-6 col-xl-3">
+                                    <div class="od-kpi"><span class="od-kpi-label">Most common villa style</span><span
+                                            class="od-kpi-value" id="villaTopStyle">—</span></div>
+                                </div>
+                                <div class="col-sm-6 col-xl-3">
+                                    <div class="od-kpi"><span class="od-kpi-label">Built size not available</span><span
+                                            class="od-kpi-value" id="villaNA">—</span></div>
+                                </div>
+                            </div>
+
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <figure class="od-card od-chart h-100">
+                                        <figcaption class="od-chart-head"><span class="od-chart-title">Villas by
+                                                bedrooms</span></figcaption>
+                                        <div class="od-vbars" id="villaBedChart"></div>
+                                    </figure>
+                                </div>
+                                <div class="col-lg-6">
+                                    <figure class="od-card od-chart h-100">
+                                        <figcaption class="od-chart-head"><span class="od-chart-title">Villas by
+                                                style</span></figcaption>
+                                        <div class="od-hbars od-hbars-stacked" id="villaStyleChart"></div>
+                                    </figure>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /.tab-content -->
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================================
+       EXISTING FOOTER (unchanged — keep the current site markup here)
+       ============================================================ -->
+
+    <!-- Floating "Give feedback" button (visible on every open data page) -->
+    <!-- <button type="button" class="btn od-fab" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+    <svg class="od-icon od-icon-sm" aria-hidden="true" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
+    Give feedback
+  </button> -->
+
+    <!-- Feedback pop-up -->
+    <div class="modal fade od-modal" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <h2 class="modal-title od-modal-title" id="feedbackTitle">Request data or share feedback</h2>
+                        <p class="od-muted mb-0">Tell us which data you need, or how we can improve these datasets.</p>
+                    </div>
+                    <button type="button" class="btn-close od-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <form id="feedbackForm" novalidate>
+                    <div class="modal-body">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="fbName" class="od-label">Name</label>
+                                <input type="text" class="form-control od-input" id="fbName" name="name"
+                                    placeholder="Name" autocomplete="name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="fbEmail" class="od-label">Email</label>
+                                <input type="email" class="form-control od-input" id="fbEmail" name="email"
+                                    placeholder="Email" autocomplete="email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="fbPhone" class="od-label">Phone number</label>
+                                <div class="input-group">
+                                    <span class="input-group-text od-prefix">+971</span>
+                                    <input type="tel" class="form-control od-input" id="fbPhone" name="phone"
+                                        placeholder="05X XXX XXXX" autocomplete="tel-national">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="fbSubject" class="od-label">Subject</label>
+                                <input type="text" class="form-control od-input" id="fbSubject" name="subject"
+                                    placeholder="Subject" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="fbMessage" class="od-label">Message</label>
+                                <textarea class="form-control od-input" id="fbMessage" name="message" rows="4"
+                                    maxlength="200" placeholder="Message" aria-describedby="fbCounter"
+                                    required></textarea>
+                                <div class="od-counter" id="fbCounter" aria-live="polite">0 / 200</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <!-- Replace with the site's existing reCAPTCHA widget -->
+                        <div class="od-recaptcha" aria-label="reCAPTCHA placeholder">
+                            <span class="od-recaptcha-box"></span>I'm not a robot<span
+                                class="od-recaptcha-brand">reCAPTCHA</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button type="button" class="btn od-btn-soft" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary od-btn-submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google Maps JavaScript API (dynamic library loader).
+       Replace YOUR_GOOGLE_MAPS_API_KEY with the site's key (Maps JavaScript API enabled,
+       restricted to the MBRHE domain by HTTP referrer). -->
+    <script>
+        (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+            key: "AIzaSyAN-DtGQj0Ew_GWkO_o_bezUF2Zzuc23TM",
+            v: "weekly",
+            language: document.documentElement.lang || "en",
+            region: "AE"
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
