@@ -5,28 +5,96 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Open Data | Mohammed Bin Rashid Housing Establishment</title>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@dubai-design-system/components-js@3.12.10/www/build/dda.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap">
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="https://www.mbrhe.gov.ae/mbrheV3/css/Master-EN.css?v=2.4" />
+
+   
+
+        <script type="text/javascript" src="https://www.mbrhe.gov.ae/Theme/js/jquery.min.js?v=2.4"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+        <script type="module">
+            import { defineCustomElements } from 'https://cdn.jsdelivr.net/npm/@dubai-design-system/components-js@3.12.10/loader/index.js';
+            defineCustomElements();
+        </script>
+        <script nomodule
+            src="https://cdn.jsdelivr.net/npm/@dubai-design-system/components-js@3.12.10/www/build/dda.js"></script>
+
 </head>
 
 <body class="od-page">
+
+    <dda-header first-logo-href="https://tec.gov.ae/en/web/tec/home"
+        first-logo-src="https://www.dof.gov.ae/Style Library/img/gov-logo.svg"
+        first-logo-white-src="https://www.dof.gov.ae/Style Library/img/gov-logo-white.svg"
+        first-logo-alt="Govenrment of Dubai Logo" second-logo-href="https://www.mbrhe.gov.ae/"
+        second-logo-src="https://www.mbrhe.gov.ae/mbrheV3/assets/img/mbrhe-logo.png"
+        second-logo-white-src="https://www.mbrhe.gov.ae/mbrheV3/assets/img/mbrhe-logo-white.png"
+        second-logo-alt="MBRHE Logo" search_button_name="search_button_name" search_input_name="search_input_name"
+        search_value="" search_input_placeholder="Search" searchfunctionality="() =&gt; console.log('Search Functionality')"
+        search_tooltip="Search" mobile-menu-search-id="mobileSearch" mobile-menu-search-url="javascript:void(0)"
+        use-predesigned-accessibility-menu="true" accessibility_tooltip="Accessibility"
+        toggle_accessibility_button_name="toggle_accessibility_button_name"
+        accessibility_button_text="accessibility_button_text" accessibility_button_id="accessibility_button_id"
+        accessibility_button_icon_family="material-icons  material-symbols-outlined"
+        accessibility_button_icon_name=""
+        accessibilitymenufunctionality="() =&gt; console.log('Accessibility Menu Functionality')"
+        close_accessibility_button_name="close_accessibility_button_name" contrast_title="Contrast"
+        contrast_description="Select your preferred contrast setting" contrast_noraml_text="Normal"
+        contrast_color_blind_text="Colours Blind" contrast_red_weakness_text="Red Weakness"
+        contrast_green_weakness_text="Green Weakness" normalcontrast="() =&gt; console.log('Normal Text')"
+        blindcontrast="() =&gt; console.log('Blind Text')" redcontrast="() =&gt; console.log('Red Text')"
+        greencontrast="() =&gt; console.log('Green Text')" screen_reader_title="Screen Reader"
+        screen_reader_description="Listen to the content of the page by clicking play or listen"
+        read_speaker_link="app-eu.readspeaker.com" text_size_title="Text Size"
+        text_size_description="Use the buttons below to increase or decrease the text size"
+        smtextsize="() =&gt; console.log('Small Text')" basetextsize="() =&gt; console.log('Base Text')"
+        lgtextsize="() =&gt; console.log('Large Text')" language_tooltip="Language" language_text="العربية"
+        language_button_name="language_button_name" languageswitch="() =&gt; console.log('Language Switcher')"
+        login_tooltip="Login" login-text="Login" login-link="/Login" login-icon="account_circle"
+        hamburger_menu_button_name="Menu" side-main-menu-title="Main Menu"
+        side-menu-items='[{"label":"Home","href":"#","subMenu":[]},{"label":"Initiatives","href":"#","subMenu":[{"headerLabel":"Initiatives","subLinkClass":"","label":"Submenu-1","href":"#","subMenu":[{"headerLabel":"Initiatives","subLinkClass":"","label":"Submenu-2","href":"#","subMenu":[{"headerLabel":"Initiatives","subLinkClass":"","label":"Submenu-4","href":"#"}]},{"headerLabel":"Initiatives","subLinkClass":"","label":"Submenu-3","href":"#"}]},{"headerLabel":"Initiatives","subLinkClass":"","label":"Submenu-1","href":"#","subMenu":[{"headerLabel":"Initiatives","subLinkClass":"","label":"Submenu-2","href":"#","subMenu":[{"headerLabel":"Initiatives","subLinkClass":"","label":"Submenu-4","href":"#"}]},{"headerLabel":"Initiatives","subLinkClass":"","label":"Submenu-3","href":"#"}]}]},{"label":"Services","href":"#","subMenu":[{"headerLabel":"Service","subLinkClass":"","label":"Service-1","href":"#"},{"headerLabel":"Service","subLinkClass":"","label":"Service-2","href":"#"}]},{"label":"Data","href":"#","subMenu":[]},{"label":"Government Services","href":"#","subMenu":[]},{"label":"Investor Relations","href":"#","subMenu":[]},{"label":"Locations","href":"#","subMenu":[]},{"label":"Newsroom","href":"#","subMenu":[]},{"label":"Contact Us","href":"#","subMenu":[]}]'
+        hide-other-menu="false" side-other-menu-title="Other"
+        other-menu-items='[{"label":"Menu 1","href":"#"},{"label":"Menu 2","href":"#"},{"label":"Menu 3","href":"#"}]'
+        close_menu_button_name="close_menu_button_name"
+        quick-links='[{"headerMenuLabel":"Home","url":"#"},{"headerMenuLabel":"About Us","url":"javascript:void(0)","type":"dda_default_submenu","children":[{"headerMenuLabel":"Submenu 1","url":"#","defaultSubMenuTitle":"Submenu 1 Title","children":[{"headerMenuLabel":"SubSubmenu 1","url":"#"},{"headerMenuLabel":"SubSubmenu 1","url":"#"}]},{"headerMenuLabel":"Submenu 2","url":"#","defaultSubMenuTitle":"Submenu 2 Title","children":[{"headerMenuLabel":"SubSubmenu 2","url":"#"},{"headerMenuLabel":"SubSubmenu 2","url":"#"}]},{"headerMenuLabel":"Submenu 3","url":"#"}]},{"headerMenuLabel":"Services","url":"javascript:void(0)","type":"dda_main_megamenu","children":[{"title":"QUICK LINKS 1","items":[{"headerMenuLabel":"Service 1","url":"#","description":"This is a description if this menu"},{"headerMenuLabel":"Service 2","url":"#"},{"headerMenuLabel":"Service 3","url":"#"}]},{"title":"QUICK LINKS 2","items":[{"headerMenuLabel":"Service 1","url":"#"},{"headerMenuLabel":"Service 2","url":"#"},{"headerMenuLabel":"Service 3","url":"#"}]},{"title":"QUICK LINKS 3","items":[{"headerMenuLabel":"Service 3","url":"#"}]},{"title":"QUICK LINKS 4","items":[{"headerMenuLabel":"Service 4","url":"#"}]}]},{"headerMenuLabel":"Contact","url":"#"}]'>
+    </dda-header>
 
     <!-- ============================================================
        EXISTING HEADER, BREADCRUMB AND "OPEN DATA" TITLE BANNER
        (unchanged — keep the current site markup here)
        ============================================================ -->
 
-    <main id="open-data">
+    <main class="inner-wrap" id="open-data">
+
+        <section class="page-hero">
+            <div class="inner-container">
+                <dda-breadcrumb design="text" separator="chevron_right" aria_label="Page information navigation" custom_class="dda-mb-3"
+                    component_mode="" data-breadcrumbs='[
+                					{"text":"Home","url":"/?MbrheHome"},
+                					{"text":"Open Data"}
+                				]'></dda-breadcrumb>
+                <h2 class="h2 Regular text-white">Open Data</h2>
+            </div>
+        </section>
 
         <!-- ========== SECTION 1: INTRO (full width) ========== -->
         <section class="od-intro" aria-labelledby="od-title">
             <div class="container-xxl od-container">
                 <div class="row g-4 g-xl-5">
                     <div class="col-lg-8">
-                        <h2 id="od-title" class="od-title">Open Data</h2>
+                        <h3 id="od-title" class="od-title">Open Data</h3>
                         <p class="od-lead">Mohammed Bin Rashid Housing Establishment provides Open Data with the highest
                             levels of accuracy and transparency for visitors to MBRHE Smart Portal, targeting human
                             development and encouragement of public participation and raising the level of awareness and
@@ -149,8 +217,8 @@
                                         <path
                                             d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
                                     </svg>
-                                    <span class="od-pulse-text"><span>View on Dubai Pulse</span><small>Land Grants
-                                            dataset</small></span>
+                                    <span class="od-pulse-text"><small>View on Dubai Pulse</small><spaan>Land Grants
+                                            dataset</span></span>
                                 </a>
                             </div>
                         </div>
@@ -270,8 +338,8 @@
                                         <path
                                             d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
                                     </svg>
-                                    <span class="od-pulse-text"><span>View on Dubai Pulse</span><small>Master
-                                            Constructions dataset</small></span>
+                                    <span class="od-pulse-text"><small>View on Dubai Pulse</small><span>Master
+                                            Constructions dataset</span></span>
                                 </a>
                             </div>
                         </div>
@@ -389,16 +457,16 @@
                                         <path
                                             d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
                                     </svg>
-                                    <span class="od-pulse-text"><span>View on Dubai Pulse</span><small>Ready-made House
-                                            Projects by Mohammed Bin Rashid Housing Establishment</small></span>
+                                    <span class="od-pulse-text"><small>View on Dubai Pulse</small><span>Ready-made House
+                                            Projects by Mohammed Bin Rashid Housing Establishment</span></span>
                                 </a>
                                 <a href="#" class="btn btn-primary od-pulse-btn">
                                     <svg class="od-icon od-icon-sm" aria-hidden="true" viewBox="0 0 24 24">
                                         <path
                                             d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
                                     </svg>
-                                    <span class="od-pulse-text"><span>View on Dubai Pulse</span><small>Projects Villas
-                                            dataset</small></span>
+                                    <span class="od-pulse-text"><small>View on Dubai Pulse</small><span>Projects Villas
+                                            dataset</span></span>
                                 </a>
                             </div>
                         </div>
@@ -451,7 +519,7 @@
                                     <input type="search" id="projectSearch" class="form-control od-input"
                                         placeholder="Type a project name">
                                     <div class="od-list-head">
-                                        <h4 class="od-list-title" id="listTitle">—</h4>
+                                        <h5 class="od-list-title" id="listTitle">—</h5>
                                         <span class="od-chart-sub" id="listCount"></span>
                                     </div>
                                     <ul class="od-project-list" id="projectList"></ul>
@@ -534,6 +602,35 @@
             </div>
         </section>
     </main>
+
+    <dda-sticky-footer happiness-icon-href="javascript:void(1254)" happiness-icon-id="happinessModalShow"
+        happiness-icon-src="https://www.mbrhe.gov.ae/mbrheV3/assets/img/icn/icn-happy.svg" happiness-icon-alt="Happiness Icon"
+        happiness-icon-tooltip="Happiness Meter" happiness-icon-click="console.log('Happiness icon clicked')"
+        accessibility-icon-href="javascript:void(1255)" accessibility-icon-id="suggestionsModalShow"
+        accessibility-icon-src="https://www.mbrhe.gov.ae/mbrheV3/assets/img/icn/icn-complaints.svg" accessibility-icon-alt="Suggestions Icon"
+        accessibility-icon-tooltip="Suggestions &amp; complaints"
+        accessibility-icon-click="console.log('Suggestion AE icon clicked')" services-icon-href="/en/Services"
+        services-icon-id="footerServices" services-icon-src="https://www.mbrhe.gov.ae/mbrheV3/assets/img/icn/icn-grid-view.svg"
+        services-icon-alt="Services Icon" services-icon-tooltip="Services" services-icon-text="Services"
+        services-icon-click="console.log('Services icon clicked')" hide-middle-section="true" middle-link='[
+    			{"LogoTooltip":"","href":"#","src":"","alt":""}
+    		]' right-link='[
+    			{"RightLinkTooltip":"12/10/2026","href":"javascript:void(0)","title":"Last Updated","itemId":"lastUpdated","ariaLabel":"Last Updated","LinkText":"Last Updated","IconFamily":"material-icons","IconName":"schedule"},
+    			{"RightLinkTooltip":"Iskan App","href":"javascript:void(0)","title":"Iskan App","itemId":"openIskanModalLink","ariaLabel":"Iskan App","LinkText":"Iskan App","IconFamily":"material-icons","IconName":"phone_android"},
+    			{"RightLinkTooltip":"Whatsapp","href":"https://api.whatsapp.com/send/?phone=97142029444","title":"Chat","itemId":"Whatsapp","ariaLabel":"Locations","LinkText":"Whatsapp","IconFamily":"ph-fill ph-whatsapp-logo h6","IconName":""},
+    			{"RightLinkTooltip":"FAQs","href":"/en/FAQs","title":"FAQs","itemId":"FAQs","ariaLabel":"FAQs","LinkText":"FAQs","IconFamily":"material-icons","IconName":"help"},
+    			{"RightLinkTooltip":"Contact Us","href":"/en/AboutUs/Contact-Us","title":"Contact Us","itemId":"contactUs","ariaLabel":"Contact Us","LinkText":"Contact Us","IconFamily":"material-icons","IconName":"mail"}
+    		]' dubaiae-icon-href="https://www.dubai.ae/en" dubaiae-icon-id="dubaiAEID"
+        dubaiae-icon-src="https://www.mbrhe.gov.ae/mbrheV3/assets/img/icn/DubaiAE.svg"
+        dubaiae-icon-small-src="https://www.mbrhe.gov.ae/mbrheV3/assets/img/icn/DdiabiAE-icon.svg" dubaiae-icon-alt="Go to dubai.ae"
+        dubaiae-icon-tooltip="dubai.ae" dubaiae-icon-on-click="console.log('Dubai AE icon clicked')"
+        ai-icon-href="https://chat.dubai.ae/?lang=en-US&mode=modal&source=mbrhe" ai-icon-id="aiIconID"
+        ai-icon-src="https://www.mbrhe.gov.ae/mbrheV3/assets/img/icn/DubaiAI.svg" ai-icon-alt="Dubai AI – digital assistant"
+        ai-icon-tooltip="DubaiAI" ai-icon-on-click="console.log('AI icon clicked')" chat-icon-href="javascript:void(0)"
+        chat-icon-id="openMoftahPopup" chat-icon-src="https://www.mbrhe.gov.ae/mbrheV3/assets/img/icn/icn-chat_bubble_outline.svg"
+        chat-icon-alt="Start online chat" chat-icon-tooltip="Online Chat"
+        chat-icon-on-click="console.log('Chat Icon clicked')" more-icon-family="material-icons"
+        more-icon="more_horiz"></dda-sticky-footer>
 
     <!-- ============================================================
        EXISTING FOOTER (unchanged — keep the current site markup here)
