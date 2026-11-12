@@ -1,1 +1,859 @@
 
+/* =====================================================================
+   MBRHE Open Data page — custom styles (works on top of Bootstrap 5.3)
+   Only the page content is styled here; the site header, title banner
+   and footer keep their existing styles.
+   ===================================================================== */
+
+:root {
+  --od-primary: #0B5DA0;
+  --od-primary-dark: #084A80;
+  --od-primary-soft: #EAF2FB;
+  --od-accent: #E8912D;
+  --od-ink: #1D2939;
+  --od-ink-2: #33475C;
+  --od-muted: #4A5868;
+  --od-line: #D6E0EB;
+  --od-line-strong: #B9C7D6;
+  --od-bg: #F4F7FB;
+  --od-faded: #C9D6E6;
+  --od-note-bg: #FFF6EB;
+  --od-note-line: #F3D3AC;
+  --od-note-ink: #5C3B12;
+  --od-land: #F1EADB;
+  --od-land-line: #DCCFB6;
+  --od-sea: #CFE2F3;
+  --od-radius: 10px;
+  --od-radius-lg: 12px;
+  --od-font: Dubai, "Noto Sans", "Noto Sans Arabic", Arial, sans-serif;
+
+  /* Bootstrap overrides */
+  --bs-primary: var(--od-primary);
+  --bs-link-color: var(--od-primary);
+  --bs-link-hover-color: var(--od-primary-dark);
+  --bs-body-color: var(--od-ink);
+}
+
+/* ---------- Base ---------- */
+.od-page {
+  background: var(--od-bg);
+  color: var(--od-ink);
+  font-family: var(--od-font);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.od-page a { color: var(--od-primary); }
+.od-page a:hover { color: var(--od-primary-dark); }
+
+.od-page :is(button, a, input, select, textarea):focus-visible {
+  outline: 3px solid var(--od-accent);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+.od-container {
+  max-width: 1688px;
+  padding-inline: 40px;
+}
+
+.od-muted { color: var(--od-muted); }
+.od-accent-text { color: var(--od-primary); }
+
+.od-icon {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.od-icon-sm { width: 18px; height: 18px; stroke-width: 2; }
+
+/* ---------- Buttons ---------- */
+.od-page .btn-primary {
+  --bs-btn-bg: var(--od-primary);
+  --bs-btn-border-color: var(--od-primary);
+  --bs-btn-hover-bg: var(--od-primary-dark);
+  --bs-btn-hover-border-color: var(--od-primary-dark);
+  --bs-btn-active-bg: var(--od-primary-dark);
+  --bs-btn-active-border-color: var(--od-primary-dark);
+  --bs-btn-disabled-bg: var(--od-primary);
+}
+
+.od-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 1px solid var(--od-primary);
+  border-radius: 8px;
+  background: #FFFFFF;
+  color: var(--od-primary);
+  font-weight: 600;
+}
+.od-btn-outline:hover { background: var(--od-primary-soft); color: var(--od-primary-dark); border-color: var(--od-primary-dark); }
+
+.od-btn-soft {
+  min-height: 44px;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  background: var(--od-primary-soft);
+  color: var(--od-primary);
+  font-weight: 600;
+}
+.od-btn-soft:hover { background: #DCE9F7; color: var(--od-primary-dark); }
+
+.od-btn-submit {
+  min-height: 44px;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.od-reset {
+  min-height: 42px;
+  padding: 9px 4px;
+  color: var(--od-primary);
+  font-weight: 600;
+}
+
+/* ---------- Section 1: intro ---------- */
+.od-intro {
+  background: #FFFFFF;
+  border-bottom: 1px solid #DCE4EE;
+  padding-block: 48px 40px;
+}
+
+.od-title {
+  margin-bottom: 16px;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--od-primary);
+}
+
+.od-lead {
+  max-width: 920px;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.od-law {
+  height: 100%;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid var(--od-line);
+  border-radius: var(--od-radius);
+  background: #F7FAFD;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color .15s, background-color .15s;
+}
+.od-law:hover { border-color: var(--od-primary); background: var(--od-primary-soft); }
+.od-law-text { flex: 1; }
+
+.od-notes {
+  height: 100%;
+  padding: 24px;
+  border: 1px solid #DCE4EE;
+  border-radius: var(--od-radius-lg);
+  background: var(--od-bg);
+}
+.od-notes-title { margin-bottom: 12px; font-size: 17px; font-weight: 700; }
+.od-notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 0;
+  padding-inline-start: 20px;
+}
+.od-notes-foot {
+  margin: 16px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid #DCE4EE;
+  font-size: 13px;
+  color: var(--od-muted);
+}
+
+/* ---------- Section 2: datasets ---------- */
+.od-datasets { padding-block: 40px 72px; }
+
+.od-section-title {
+  margin-bottom: 4px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Horizontal tabs */
+.od-tabs {
+  gap: 4px;
+  border-bottom: 2px solid var(--od-line);
+}
+.od-tabs .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  min-height: 44px;
+  margin-bottom: -2px;
+  padding: 14px 24px 12px;
+  border: none;
+  border-bottom: 3px solid transparent;
+  border-radius: var(--od-radius) var(--od-radius) 0 0;
+  background: transparent;
+  color: var(--od-ink);
+  text-align: start;
+}
+.od-tabs .nav-link:hover { background: rgba(255, 255, 255, .6); color: var(--od-primary); }
+.od-tabs .nav-link.active {
+  background: #FFFFFF;
+  border-bottom-color: var(--od-primary);
+  color: var(--od-primary);
+}
+.od-tab-title { font-size: 17px; font-weight: 700; }
+.od-tab-meta { font-size: 13px; color: var(--od-muted); }
+
+.od-panel {
+  padding: 32px;
+  border: 1px solid var(--od-line);
+  border-top: none;
+  border-radius: 0 0 var(--od-radius-lg) var(--od-radius-lg);
+  background: #FFFFFF;
+}
+
+.od-panel-title {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--od-primary);
+}
+
+.od-chip-static {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #EEF3F9;
+  color: var(--od-ink-2);
+  font-size: 13px;
+}
+
+.od-pulse-btn {
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-align: start;
+  font-weight: 600;
+}
+.od-page .od-pulse-btn,
+.od-page .od-pulse-btn:hover { color: #FFFFFF; }
+.od-pulse-text { display: flex; flex-direction: column; line-height: 1.3; }
+.od-pulse-text small { font-size: 12px; font-weight: 400; color: #DCE8F5; }
+
+.od-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 1px solid var(--od-note-line);
+  border-radius: 8px;
+  background: var(--od-note-bg);
+  color: var(--od-note-ink);
+  font-size: 14px;
+}
+.od-note .od-icon { margin-top: 2px; }
+
+/* Filters */
+.od-filters {
+  padding: 18px 20px;
+  border-radius: var(--od-radius);
+  background: var(--od-bg);
+}
+
+.od-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--od-ink-2);
+}
+.od-sublabel { font-size: 13px; color: var(--od-muted); }
+
+.od-select,
+.od-input {
+  min-height: 42px;
+  border-color: var(--od-line-strong);
+  border-radius: 8px;
+  color: var(--od-ink);
+  font-family: inherit;
+}
+.od-select:focus,
+.od-input:focus { border-color: var(--od-primary); box-shadow: 0 0 0 .2rem rgba(11, 93, 160, .18); }
+
+.od-range { accent-color: var(--od-primary); }
+.od-range::-webkit-slider-thumb { background-color: var(--od-primary); }
+.od-range::-webkit-slider-thumb:active { background-color: var(--od-primary-dark); }
+.od-range::-moz-range-thumb { background-color: var(--od-primary); }
+.od-range::-moz-range-thumb:active { background-color: var(--od-primary-dark); }
+.od-range:focus::-webkit-slider-thumb { box-shadow: 0 0 0 .2rem rgba(11, 93, 160, .25); }
+.od-range:focus::-moz-range-thumb { box-shadow: 0 0 0 .2rem rgba(11, 93, 160, .25); }
+
+.od-chip {
+  min-width: 44px;
+  min-height: 40px;
+  padding: 8px 16px;
+  border: 1px solid var(--od-line-strong);
+  border-radius: 999px;
+  background: #FFFFFF;
+  color: var(--od-ink);
+  font-size: 14px;
+}
+.od-chip:hover { border-color: var(--od-primary); color: var(--od-primary); }
+.od-chip.active,
+.od-chip.active:hover {
+  border-color: var(--od-primary);
+  background: var(--od-primary);
+  color: #FFFFFF;
+}
+
+/* KPI tiles */
+.od-kpi {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+  border: 1px solid var(--od-line);
+  border-radius: var(--od-radius);
+}
+.od-kpi-label { font-size: 13px; color: var(--od-muted); }
+.od-kpi-value { font-size: 28px; font-weight: 700; line-height: 1.3; }
+
+/* Cards and charts */
+.od-card {
+  margin: 0;
+  padding: 20px 24px;
+  border: 1px solid var(--od-line);
+  border-radius: var(--od-radius);
+  background: #FFFFFF;
+}
+
+.od-chart-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 16px;
+  margin-bottom: 16px;
+}
+.od-chart-title { font-size: 16px; font-weight: 700; }
+.od-chart-sub { font-size: 13px; color: var(--od-muted); }
+
+.od-legend { display: flex; gap: 16px; font-size: 13px; color: var(--od-ink-2); }
+.od-legend-item { display: inline-flex; align-items: center; gap: 6px; }
+.od-swatch { width: 12px; height: 12px; border-radius: 3px; }
+.od-swatch-primary { background: var(--od-primary); }
+.od-swatch-accent { background: var(--od-accent); }
+
+/* Vertical bars — bar height comes from --h set by script.js */
+.od-vbars {
+  --od-plot-h: 160px;
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+}
+.od-vbars-lg { --od-plot-h: 200px; gap: 10px; }
+
+.od-vbar-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.od-vbar-value { font-size: 12px; color: var(--od-ink-2); white-space: nowrap; }
+.od-vbar-plot {
+  width: 100%;
+  height: var(--od-plot-h);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3px;
+  border-bottom: 1px solid var(--od-line-strong);
+}
+.od-vbar {
+  width: 100%;
+  max-width: 56px;
+  height: var(--h, 0%);
+  min-height: 4px;
+  border-radius: 4px 4px 0 0;
+  background: var(--od-primary);
+  transition: height .25s ease, background-color .2s;
+}
+.od-vbar.is-faded { background: var(--od-faded); }
+.od-vbars-accent .od-vbar { background: var(--od-accent); }
+.od-vbar-col.is-dimmed { opacity: .28; }
+
+.od-vbar-pair { max-width: 26px; border-radius: 3px 3px 0 0; }
+.od-vbar-pair.is-loan { background: var(--od-accent); }
+
+.od-vbar-label { font-size: 13px; color: var(--od-muted); white-space: nowrap; }
+
+/* Scrollable year chart: fixed-width columns so any number of years fits */
+.od-chart-scroll {
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-color: var(--od-line-strong) transparent;
+}
+.od-vbars-many {
+  min-width: max-content;
+  gap: 8px;
+}
+.od-vbars-many .od-vbar-col { flex: 0 0 44px; }
+.od-vbars-many .od-vbar { max-width: 32px; }
+.od-vbars-many .od-vbar-value { font-size: 11px; }
+
+/* Scrollable list for long bar charts (e.g. 23 project statuses) */
+.od-scroll-list {
+  max-height: 340px;
+  overflow-y: auto;
+  padding-inline-end: 10px;
+  scrollbar-color: var(--od-line-strong) transparent;
+}
+.od-hbars-status .od-hbar-row { grid-template-columns: minmax(110px, 160px) minmax(0, 1fr) 64px; }
+
+/* Note under summary cards (shown while a year is selected) */
+.od-kpi-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: -8px 0 24px;
+  font-size: 13px;
+  color: var(--od-note-ink);
+}
+.od-kpi-note.d-none { display: none; }
+
+/* Horizontal bars — fill width comes from --w set by script.js */
+.od-hbars { display: flex; flex-direction: column; gap: 12px; }
+.od-hbar-row {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) 72px;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+.od-hbars-wide .od-hbar-row { grid-template-columns: 110px minmax(0, 1fr) 72px; }
+.od-hbar-row.is-dimmed { opacity: .3; }
+.od-hbar-label { color: var(--od-ink-2); }
+.od-hbar-value { text-align: end; }
+.od-hbar-track {
+  height: 22px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #EEF3F9;
+}
+.od-hbar-fill {
+  width: var(--w, 0%);
+  height: 100%;
+  background: var(--od-primary);
+  transition: width .25s ease;
+}
+
+/* Stacked variant: label + value above the bar */
+.od-hbars-stacked { gap: 16px; padding-top: 8px; }
+.od-hbars-stacked .od-hbar-row {
+  grid-template-columns: 1fr auto;
+  gap: 6px 12px;
+}
+.od-hbars-stacked .od-hbar-track { grid-column: 1 / -1; grid-row: 2; }
+
+/* Scatter — dot position from --x / --y set by script.js */
+.od-scatter-wrap {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 6px;
+}
+.od-axis-y {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 12px;
+  color: var(--od-muted);
+  text-align: center;
+}
+.od-axis-x {
+  padding-top: 6px;
+  padding-left: 24px; /* lines up with the plot area, which sits right of the y-axis label in both languages */
+  font-size: 12px;
+  color: var(--od-muted);
+  text-align: center;
+}
+.od-scatter {
+  position: relative;
+  height: 190px;
+  border-inline-start: 1px solid var(--od-line-strong);
+  border-bottom: 1px solid var(--od-line-strong);
+  background-image: linear-gradient(#EEF3F9 1px, transparent 1px);
+  background-size: 100% 25%;
+}
+.od-scatter-lg { height: 280px; }
+.od-scatter-empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: var(--od-muted);
+  font-weight: 600;
+}
+.od-scatter-empty.d-none { display: none; }
+.od-dot {
+  position: absolute;
+  left: var(--x);
+  bottom: var(--y);
+  width: 9px;
+  height: 9px;
+  margin: 0 0 -4px -4px;
+  border-radius: 50%;
+  background: var(--od-primary);
+  opacity: .72;
+}
+
+/* ---------- Projects & Villas ---------- */
+.od-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.od-steps li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-block: 8px;
+  padding-inline: 8px 14px;
+  border-radius: 999px;
+  background: var(--od-primary-soft);
+  color: #0B4A80;
+  font-size: 14px;
+  font-weight: 600;
+}
+.od-step-num {
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--od-primary);
+  color: #FFFFFF;
+  font-size: 13px;
+}
+
+.od-sub-title { margin: 0; font-size: 18px; font-weight: 700; }
+
+/* Area map (Google Maps) */
+.od-map {
+  position: relative;
+  height: 460px;
+  overflow: hidden;
+  border: 1px solid var(--od-line);
+  border-radius: var(--od-radius-lg);
+  background: #E9EEF3;
+}
+.od-gmap { width: 100%; height: 100%; }
+
+.od-map-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--od-bg);
+  color: var(--od-muted);
+  text-align: center;
+}
+
+/* Area marker: a pill with the area name and a project-count badge */
+.od-map-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-block: 5px;
+  padding-inline: 12px 6px;
+  border: 1.5px solid var(--od-primary);
+  border-radius: 999px;
+  background: #FFFFFF;
+  color: var(--od-primary-dark);
+  font-family: var(--od-font);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(16, 40, 70, .25);
+  cursor: pointer;
+  transition: background-color .15s, color .15s, transform .15s;
+}
+.od-map-pill:hover { background: var(--od-primary-soft); transform: translateY(-1px); }
+.od-map-badge {
+  min-width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--od-primary);
+  color: #FFFFFF;
+  font-size: 12px;
+}
+.od-map-pill.active {
+  background: var(--od-primary);
+  border-color: var(--od-primary-dark);
+  color: #FFFFFF;
+}
+.od-map-pill.active .od-map-badge { background: #FFFFFF; color: var(--od-primary); }
+
+.od-area-na {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px dashed #8FA3B8;
+  border-radius: 8px;
+  background: #FFFFFF;
+  color: var(--od-ink);
+  font-weight: 600;
+}
+.od-area-na:hover { border-color: var(--od-primary); color: var(--od-primary); }
+.od-area-na.active,
+.od-area-na.active:hover { background: var(--od-primary); border-color: var(--od-primary); color: #FFFFFF; }
+
+/* Project panel */
+.od-project-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+  border-radius: var(--od-radius-lg);
+}
+.od-project-panel .od-label { margin-bottom: -8px; }
+.od-list-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #E3EAF2;
+}
+.od-list-title { margin: 0; font-size: 17px; font-weight: 700; }
+
+.od-project-list {
+  max-height: 330px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.od-project-item {
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--od-line);
+  border-radius: 8px;
+  background: #FFFFFF;
+  color: var(--od-ink);
+  text-align: start;
+}
+.od-project-item:hover { border-color: var(--od-primary); }
+.od-project-item.active { border-color: var(--od-primary); background: var(--od-primary-soft); }
+/* Project with no villa records: listed, but not clickable */
+.od-project-item.is-static,
+.od-project-item.is-static:hover {
+  border-style: dashed;
+  border-color: var(--od-line);
+  background: var(--od-bg);
+  cursor: default;
+}
+.od-project-name { display: block; font-weight: 600; }
+.od-project-meta { display: block; font-size: 13px; color: var(--od-muted); }
+.od-project-cta { font-size: 13px; font-weight: 600; color: var(--od-primary); white-space: nowrap; }
+
+/* Villa mix */
+.od-villa {
+  padding-top: 24px;
+  border-top: 1px solid var(--od-line);
+}
+.od-eyebrow {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--od-muted);
+}
+.od-villa-title { margin: 4px 0 2px; font-size: 22px; font-weight: 700; color: var(--od-primary); }
+.od-project-select { min-width: 260px; }
+
+/* ---------- Floating feedback button ---------- */
+.od-fab {
+  position: fixed;
+  inset-inline-end: 24px;
+  bottom: 24px;
+  z-index: 1040;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 999px;
+  background: var(--od-primary);
+  color: #FFFFFF;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(11, 61, 110, .32);
+}
+.od-fab:hover,
+.od-fab:focus-visible { background: var(--od-primary-dark); color: #FFFFFF; }
+
+/* ---------- Feedback modal ---------- */
+.od-modal .modal-content {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(10, 30, 60, .35);
+  font-family: var(--od-font);
+}
+.od-modal .modal-header,
+.od-modal .modal-body,
+.od-modal .modal-footer { padding-inline: 32px; }
+.od-modal .modal-header { align-items: flex-start; gap: 16px; padding-top: 28px; border-bottom: none; }
+.od-modal .modal-footer { padding-bottom: 28px; border-top: none; gap: 16px; }
+.od-modal-title { margin-bottom: 4px; font-size: 22px; font-weight: 700; color: var(--od-primary); }
+
+.od-close {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--od-line);
+  border-radius: 50%;
+  background-size: 14px;
+  opacity: 1;
+}
+
+.od-prefix {
+  border-color: var(--od-line-strong);
+  background: var(--od-bg);
+  font-size: 14px;
+}
+.od-counter { margin-top: 4px; font-size: 13px; color: var(--od-muted); text-align: end; }
+
+.od-recaptcha {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid #D0D5DC;
+  border-radius: 4px;
+  background: #F9F9F9;
+  font-size: 14px;
+}
+.od-recaptcha-box {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #9AA4AF;
+  border-radius: 3px;
+  background: #FFFFFF;
+}
+.od-recaptcha-brand { margin-inline-start: 24px; font-size: 11px; color: var(--od-muted); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991.98px) {
+  .od-container { padding-inline: 20px; }
+  .od-panel { padding: 20px; }
+  .od-vbars-lg { gap: 4px; }
+  .od-vbars-lg .od-vbar-value { display: none; }
+  .od-vbar-label { font-size: 11px; }
+}
+
+@media (max-width: 767.98px) {
+  .od-intro { padding-block: 32px; }
+  .od-tabs { flex-wrap: nowrap; overflow-x: auto; }
+  .od-tabs .nav-link { padding: 12px 16px 10px; white-space: nowrap; }
+
+  .od-map { height: 360px; }
+  .od-map-pill { font-size: 12px; padding-block: 4px; padding-inline: 10px 5px; }
+
+  .od-modal .modal-header,
+  .od-modal .modal-body,
+  .od-modal .modal-footer { padding-inline: 20px; }
+  .od-fab { inset-inline-end: 16px; bottom: 16px; }
+}
+
+/* ---------- Year range slider row ---------- */
+.od-range-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ---------- About this dataset (How to read / Use cases) ---------- */
+.od-accordion {
+  --bs-accordion-border-color: var(--od-line);
+  --bs-accordion-border-radius: var(--od-radius);
+  --bs-accordion-inner-border-radius: calc(var(--od-radius) - 1px);
+  --bs-accordion-btn-padding-y: 12px;
+  --bs-accordion-btn-padding-x: 18px;
+  --bs-accordion-btn-color: var(--od-ink);
+  --bs-accordion-active-color: var(--od-primary);
+  --bs-accordion-active-bg: var(--od-primary-soft);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 .2rem rgba(11, 93, 160, .18);
+  --bs-accordion-body-padding-x: 18px;
+  --bs-accordion-body-padding-y: 14px;
+}
+.od-accordion .accordion-button {
+  min-height: 44px;
+  font-family: var(--od-font);
+  font-size: 15px;
+  font-weight: 600;
+}
+.od-accordion .accordion-body { color: var(--od-ink-2); }
+
+/* ---------- Arabic (RTL) ----------
+   Bootstrap's RTL stylesheet mirrors the grid, forms and components; the custom
+   styles above use logical properties (inline-start / inline-end) so they mirror too.
+   Time lines (the year charts and the year slider) and the scatter chart's axes always
+   run left to right, as is usual for charts in Arabic too. Category charts follow the
+   page direction so they line up with their filter buttons. */
+.od-timeline,
+.od-range-row { direction: ltr; }
+[dir="rtl"] .od-icon-flip { transform: scaleX(-1); }
+/* Arabic script is not letter-spaced or upper-cased */
+[dir="rtl"] .od-eyebrow { letter-spacing: 0; text-transform: none; }
+
+
+
+/*******/
+.dda-toolbar-menu .login-button i{
+    display: none;
+}
