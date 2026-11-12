@@ -24,7 +24,7 @@
   --od-sea: #CFE2F3;
   --od-radius: 10px;
   --od-radius-lg: 12px;
-  --od-font: Dubai, "Noto Sans", Arial, sans-serif;
+  --od-font: Dubai, "Noto Sans", "Noto Sans Arabic", Arial, sans-serif;
 
   /* Bootstrap overrides */
   --bs-primary: var(--od-primary);
@@ -408,6 +408,40 @@
 
 .od-vbar-label { font-size: 13px; color: var(--od-muted); white-space: nowrap; }
 
+/* Scrollable year chart: fixed-width columns so any number of years fits */
+.od-chart-scroll {
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-color: var(--od-line-strong) transparent;
+}
+.od-vbars-many {
+  min-width: max-content;
+  gap: 8px;
+}
+.od-vbars-many .od-vbar-col { flex: 0 0 44px; }
+.od-vbars-many .od-vbar { max-width: 32px; }
+.od-vbars-many .od-vbar-value { font-size: 11px; }
+
+/* Scrollable list for long bar charts (e.g. 23 project statuses) */
+.od-scroll-list {
+  max-height: 340px;
+  overflow-y: auto;
+  padding-inline-end: 10px;
+  scrollbar-color: var(--od-line-strong) transparent;
+}
+.od-hbars-status .od-hbar-row { grid-template-columns: minmax(110px, 160px) minmax(0, 1fr) 64px; }
+
+/* Note under summary cards (shown while a year is selected) */
+.od-kpi-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: -8px 0 24px;
+  font-size: 13px;
+  color: var(--od-note-ink);
+}
+.od-kpi-note.d-none { display: none; }
+
 /* Horizontal bars — fill width comes from --w set by script.js */
 .od-hbars { display: flex; flex-direction: column; gap: 12px; }
 .od-hbar-row {
@@ -457,7 +491,7 @@
 }
 .od-axis-x {
   padding-top: 6px;
-  padding-inline-start: 24px;
+  padding-left: 24px; /* lines up with the plot area, which sits right of the y-axis label in both languages */
   font-size: 12px;
   color: var(--od-muted);
   text-align: center;
@@ -470,6 +504,18 @@
   background-image: linear-gradient(#EEF3F9 1px, transparent 1px);
   background-size: 100% 25%;
 }
+.od-scatter-lg { height: 280px; }
+.od-scatter-empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: var(--od-muted);
+  font-weight: 600;
+}
+.od-scatter-empty.d-none { display: none; }
 .od-dot {
   position: absolute;
   left: var(--x);
@@ -495,7 +541,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 14px 8px 8px;
+  padding-block: 8px;
+  padding-inline: 8px 14px;
   border-radius: 999px;
   background: var(--od-primary-soft);
   color: #0B4A80;
@@ -544,7 +591,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 5px 6px 5px 12px;
+  padding-block: 5px;
+  padding-inline: 12px 6px;
   border: 1.5px solid var(--od-primary);
   border-radius: 999px;
   background: #FFFFFF;
@@ -637,6 +685,14 @@
 }
 .od-project-item:hover { border-color: var(--od-primary); }
 .od-project-item.active { border-color: var(--od-primary); background: var(--od-primary-soft); }
+/* Project with no villa records: listed, but not clickable */
+.od-project-item.is-static,
+.od-project-item.is-static:hover {
+  border-style: dashed;
+  border-color: var(--od-line);
+  background: var(--od-bg);
+  cursor: default;
+}
 .od-project-name { display: block; font-weight: 600; }
 .od-project-meta { display: block; font-size: 13px; color: var(--od-muted); }
 .od-project-cta { font-size: 13px; font-weight: 600; color: var(--od-primary); white-space: nowrap; }
@@ -745,7 +801,7 @@
   .od-tabs .nav-link { padding: 12px 16px 10px; white-space: nowrap; }
 
   .od-map { height: 360px; }
-  .od-map-pill { font-size: 12px; padding: 4px 5px 4px 10px; }
+  .od-map-pill { font-size: 12px; padding-block: 4px; padding-inline: 10px 5px; }
 
   .od-modal .modal-header,
   .od-modal .modal-body,
@@ -753,10 +809,46 @@
   .od-fab { inset-inline-end: 16px; bottom: 16px; }
 }
 
-/* ---------- Arabic (RTL) ---------- */
-[dir="rtl"] .od-axis-y { transform: none; }
-[dir="rtl"] .od-dot { left: auto; right: var(--x); margin: 0 -4px -4px 0; }
-[dir="rtl"] .od-steps li { padding: 8px 8px 8px 14px; }
+/* ---------- Year range slider row ---------- */
+.od-range-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ---------- About this dataset (How to read / Use cases) ---------- */
+.od-accordion {
+  --bs-accordion-border-color: var(--od-line);
+  --bs-accordion-border-radius: var(--od-radius);
+  --bs-accordion-inner-border-radius: calc(var(--od-radius) - 1px);
+  --bs-accordion-btn-padding-y: 12px;
+  --bs-accordion-btn-padding-x: 18px;
+  --bs-accordion-btn-color: var(--od-ink);
+  --bs-accordion-active-color: var(--od-primary);
+  --bs-accordion-active-bg: var(--od-primary-soft);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 .2rem rgba(11, 93, 160, .18);
+  --bs-accordion-body-padding-x: 18px;
+  --bs-accordion-body-padding-y: 14px;
+}
+.od-accordion .accordion-button {
+  min-height: 44px;
+  font-family: var(--od-font);
+  font-size: 15px;
+  font-weight: 600;
+}
+.od-accordion .accordion-body { color: var(--od-ink-2); }
+
+/* ---------- Arabic (RTL) ----------
+   Bootstrap's RTL stylesheet mirrors the grid, forms and components; the custom
+   styles above use logical properties (inline-start / inline-end) so they mirror too.
+   Time lines (the year charts and the year slider) and the scatter chart's axes always
+   run left to right, as is usual for charts in Arabic too. Category charts follow the
+   page direction so they line up with their filter buttons. */
+.od-timeline,
+.od-range-row { direction: ltr; }
+[dir="rtl"] .od-icon-flip { transform: scaleX(-1); }
+/* Arabic script is not letter-spaced or upper-cased */
+[dir="rtl"] .od-eyebrow { letter-spacing: 0; text-transform: none; }
 
 
 
